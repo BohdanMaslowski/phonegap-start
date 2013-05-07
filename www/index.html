@@ -39,7 +39,15 @@
           
           document.addEventListener('deviceready', function()
           {
-              var ref = window.open('http://app.praetoris.cz', '_blank', 'location=no');
+              //var ref = window.open('http://app.praetoris.cz', '_blank', 'location=no');
+              
+              window.plugins.childBrowser.showWebPage('http://www.google.com',
+                                        { 
+                                          showLocationBar: true,
+                                          showAddress : true,
+                                          showNavigationBar : true 
+                                        });
+              
           }, false);
           
           
