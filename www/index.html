@@ -34,12 +34,33 @@
     
     
     <body>
-    <div data-role="page" id="target">Loading...</div>
+    <div data-role="page">
+      <div data-role="header">PRAETOR</div>
+  	  <div data-role="content" id="content">Loading...</div>
+	  </div>
+
     <script>
-      $(function() { $("#target").load("http://www.praetoris.cz/main.php") });
+      $(function() { $("#content").load("http://www.praetoris.cz/main.php") });
       function openSystem(url)
       {
         window.open(url, '_system');
+      }
+      
+      function openIntent(url, mime)
+      {
+      alert(window.plugins.webintent.ACTION_VIEW);
+      window.plugins.webintent.startActivity({
+            action: window.plugins.webintent.ACTION_VIEW,
+            url: url,
+            type: mime
+          },
+          function() {},
+          function(x) {
+            alert(x);
+            alert('Failed to open URL via Android Intent.');
+            console.log("Failed to open URL via Android Intent.")
+          }
+      );
       }
     </script>
     <script type="text/javascript" src="phonegap.js"></script>
