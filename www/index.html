@@ -29,10 +29,6 @@
 
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <title>Hello World</title>
-        <style>
-          * { font-size: 20px; }
-          a { margin: 20px; }          
-        </style>
     </head>
     <body>
         <div>
@@ -47,13 +43,19 @@
                 <a onclick="window.open('http://www.praetoris.cz/test.php');">TEST 2A</a>
                 <a onclick="window.open('http://www.praetoris.cz/test.php', '_system');">TEST 3A</a>
                 <a onclick="window.open('http://www.praetoris.cz/test.php', '_blank');">TEST 4A</a>
+                
+                <a onclick="testLOAD();">TEST LOAD</a>
+            <div id="#taget">target</div>
             
         </div>
         <script type="text/javascript" src="phonegap.js"></script>
         <script type="text/javascript" src="webintent.js"></script>
         <script type="text/javascript" >
          $(function() { $("#test").html("aaa"); });
-        
+        function testLOAD()
+        {
+          $("#target").load("http://www.praetoris.cz/test.php");
+        }
         function openx()
         {
             alert(window.plugins.webintent.ACTION_VIEW);
