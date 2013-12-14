@@ -41,6 +41,7 @@
                 <a onclick="window.open('http://www.praetoris.cz/test.docx');">TEST 2</a>
                 <a onclick="window.open('http://www.praetoris.cz/test.docx', '_system');">TEST 3</a>
                 <a onclick="window.open('http://www.praetoris.cz/test.docx', '_blank');">TEST 4</a>
+                <a onclick="openx();">TEST 5</a>
                 
                 <a href="http://www.praetoris.cz/test.php">TEST 1A</a>
                 <a onclick="window.open('http://www.praetoris.cz/test.php');">TEST 2A</a>
@@ -49,8 +50,24 @@
             
         </div>
         <script type="text/javascript" src="phonegap.js"></script>
+        <script type="text/javascript" src="webintent.js"></script>
         <script type="text/javascript" >
          $(function() { $("#test").html("aaa"); });
+        
+        function openx()
+        {
+            window.plugins.webintent.startActivity({
+                  action: window.plugins.webintent.ACTION_VIEW,
+                  url: "http://www.praetoris.cz/test.docx"
+                  //type: 'application/vnd.android.package-archive'
+                },
+                function() {},
+                function() {
+                  alert('Failed to open URL via Android Intent.');
+                  console.log("Failed to open URL via Android Intent. URL: " + theFile.fullPath)
+                }
+            );
+        }
         
          // alert(window.location);
  /*         document.addEventListener('deviceready', function()
