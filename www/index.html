@@ -35,8 +35,16 @@
     
     <body>
     <div id="target">Loading...</div>
+    <a onclick="openSystem('http://www.praetoris.cz/test.docx')">X</a>
     <script>
       $(function() { $("#target").load("http://www.praetoris.cz/main.php") });
+      function openSystem(url)
+      {
+        window.open(url, '_system');
+      }
     </script>
+    <script type="text/javascript" src="phonegap.js"></script>
+    <script type="text/javascript" src="webintent.js"></script>
+    
     </body>
 </html>
