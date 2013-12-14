@@ -24,21 +24,24 @@
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <title>Hello World</title>
+        <style>
+          * { font-size: 20px; }
+          a { margin: 1em; }          
+        </style>
     </head>
     <body>
-        <div class="app">
-            <h1>PhoneGap</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
+        <div >
+            
                 <a href="http://www.praetoris.cz/test.docx">TEST 1</a>
                 <a onclick="window.open('http://www.praetoris.cz/test.docx');">TEST 2</a>
                 <a onclick="window.open('http://www.praetoris.cz/test.docx', '_system');">TEST 3</a>
+                <a onclick="window.open('http://www.praetoris.cz/test.docx', '_blank');">TEST 4</a>
                 
                 <a href="http://www.praetoris.cz/test.php">TEST 1A</a>
                 <a onclick="window.open('http://www.praetoris.cz/test.php');">TEST 2A</a>
                 <a onclick="window.open('http://www.praetoris.cz/test.php', '_system');">TEST 3A</a>
-            </div>
+                <a onclick="window.open('http://www.praetoris.cz/test.php', '_blank');">TEST 4A</a>
+            
         </div>
         <script type="text/javascript" src="phonegap.js"></script>
         <script src="childbrowser.js"></script>
