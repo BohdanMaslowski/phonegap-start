@@ -34,8 +34,7 @@
     
     
     <body>
-    <div id="target">Loading...</div>
-    <a onclick="openSystem('http://www.praetoris.cz/test.docx')">X</a>
+    <div data-role="page" id="target">Loading...</div>
     <script>
       $(function() { $("#target").load("http://www.praetoris.cz/main.php") });
       function openSystem(url)
