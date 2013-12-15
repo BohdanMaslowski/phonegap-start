@@ -64,7 +64,6 @@
       
       function openIntent(url, mime)
       {
-        alert(window.plugins.webintent.ACTION_VIEW);
         window.plugins.webintent.startActivity({
             action: window.plugins.webintent.ACTION_VIEW,
             url: url,
@@ -94,7 +93,6 @@
                       fileUrl,
                       sPath + tempName,
                       function(theFile) {
-                          alert("download complete: " + theFile.toURI());
                           openIntent(theFile.toURI(), mimeType);
                       },
                       function(error) {
