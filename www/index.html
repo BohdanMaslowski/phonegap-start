@@ -34,13 +34,15 @@
     
     
     <body>
-    <div data-role="page">
-      <div data-role="header">PRAETOR</div>
-  	  <div data-role="content" id="content">Loading...</div>
-	  </div>
+
+    <div data-role="page">xxx</div>
 
     <script>
-      $(function() { $("#content").load("http://www.praetoris.cz/main.php") });
+      
+      $(function() {
+       //$("#content").load("http://www.praetoris.cz/main.php") 
+       $.mobile.changePage( "http://www.praetoris.cz/main.php");
+       });
       function openSystem(url)
       {
         window.open(url, '_system');
