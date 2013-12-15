@@ -64,7 +64,6 @@
       
       function openIntent(url, mime)
       {
-        alert('openIntent');
         alert(window.plugins.webintent.ACTION_VIEW);
         window.plugins.webintent.startActivity({
             action: window.plugins.webintent.ACTION_VIEW,
@@ -80,7 +79,7 @@
       );
       }
       
-      function downloadFile(){
+      function downloadFile(fileUrl, mimeType, tempName){
 
         window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, 
           function onFileSystemSuccess(fileSystem) {
@@ -92,11 +91,11 @@
                   fileEntry.remove();
       
                   fileTransfer.download(
-                      "http://www.w3.org/2011/web-apps-ws/papers/Nitobi.pdf",
-                      sPath + "theFile.pdf",
+                      fileUrl,
+                      sPath + tempName,
                       function(theFile) {
                           alert("download complete: " + theFile.toURI());
-                          openIntent(theFile.toURI(), 'application/pdf');
+                          openIntent(theFile.toURI(), mimeType);
                       },
                       function(error) {
                           alert("download error source " + error.source);
