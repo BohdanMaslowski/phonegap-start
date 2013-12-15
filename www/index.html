@@ -35,13 +35,25 @@
     
     <body>
 
-    <div data-role="page">xxx</div>
+    <div data-role="page" id="contentx">
+    
+    <div data-role="header"><h3>LOADING...</h3></div>
+    
+    </div>
 
+    
+    
     <script>
       
+      $("#xx").click(function()
+      {
+        
+      });
       $(function() {
-       //$("#content").load("http://www.praetoris.cz/main.php") 
-       $.mobile.changePage( "http://www.praetoris.cz/main.php");
+       $.mobile.allowCrossDomainPages = true;
+       $.mobile.changePage( "http://www.praetoris.cz/main.php", { changeHash : false} );
+       //$("#content").load("http://www.praetoris.cz/main.php"); 
+       
        });
       function openSystem(url)
       {
@@ -65,8 +77,8 @@
       );
       }
     </script>
-    <script type="text/javascript" src="phonegap.js"></script>
-    <script type="text/javascript" src="webintent.js"></script>
+    <!--script type="text/javascript" src="phonegap.js"></script>
+    <script type="text/javascript" src="webintent.js"></script-->
     
     </body>
 </html>
