@@ -42,19 +42,17 @@
     </div>
 
     
-    
-    <script>
+    <script type="text/javascript" src="phonegap.js"></script>
+    <script type="text/javascript" src="webintent.js"></script>
+    <script type="text/javascript">
       
-      $("#xx").click(function()
-      {
-        
-      });
+
       $(function() {
        $.mobile.allowCrossDomainPages = true;
        $.mobile.changePage( "http://www.praetoris.cz/main.php", { changeHash : false} );
        //$("#content").load("http://www.praetoris.cz/main.php"); 
-       
        });
+       
       function openSystem(url)
       {
         window.open(url, '_system');
@@ -62,8 +60,9 @@
       
       function openIntent(url, mime)
       {
-      alert(window.plugins.webintent.ACTION_VIEW);
-      window.plugins.webintent.startActivity({
+        alert('openIntent');
+        alert(window.plugins.webintent.ACTION_VIEW);
+        window.plugins.webintent.startActivity({
             action: window.plugins.webintent.ACTION_VIEW,
             url: url,
             type: mime
@@ -77,8 +76,7 @@
       );
       }
     </script>
-    <script type="text/javascript" src="phonegap.js"></script>
-    <script type="text/javascript" src="webintent.js"></script>
+    
     
     </body>
 </html>
