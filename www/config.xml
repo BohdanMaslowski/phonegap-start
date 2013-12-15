@@ -48,6 +48,8 @@
 
 <!--gap:plugin name="com.phonegap.plugins.childbrowser" /-->
     <gap:plugin name="net.tunts.webintent" />
+    <gap:plugin name="org.apache.cordova.file" />
+    <gap:plugin name="org.apache.cordova.file-transfer" />
     
     <!-- Plugins can also be added here. -->
     <!--
