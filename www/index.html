@@ -56,10 +56,11 @@
       $(function() {
        $.support.cors = true;
        $.mobile.allowCrossDomainPages = true;
+       $.mobile.defaultPageTransition = "slide";
        $.mobile.buttonMarkup.hoverDelay = 0;
       });
       $("#filesLink").click(function () {
-       $.mobile.changePage( "http://www.praetoris.cz/main.php", { transition: 'slide', changeHash : false} );
+       $.mobile.changePage( "http://www.praetoris.cz/main.php", { changeHash : false} );
        //$("#content").load("http://www.praetoris.cz/main.php"); 
        });
        
